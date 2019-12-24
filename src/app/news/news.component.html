@@ -1,0 +1,63 @@
+
+<div class="container navigationBar">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+      <a class="navbar-brand" href="#">News Portal</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+    
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home">Top Headlines</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact-list">Everything</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact-create">Sources</a>
+          </li>
+    
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="container topHeadlineSection">
+    <form>
+      <div class="form-group">
+        <label for="Country">Country</label>
+        <input type="text" class="form-control" id="country" aria-describedby="emailHelp" placeholder="Enter Country" [(ngModel)] = "countryName">
+      </div>
+      <div class="form-group">
+        <label for="Language">Language</label>
+        <input type="text" class="form-control" id="language" placeholder="Enter Language">
+      </div>
+      <div class="form-group">
+        <label for="sources">Sources</label>
+        <input type="text" class="form-control" id="sources" placeholder="Enter Sources">
+      </div>
+      <div class="form-group">
+        <label for="category">Category</label>
+        <input type="text" class="form-control" id="category" placeholder="Enter Category">
+      </div>
+    </form>
+  </div>
+  
+  <div class="container newsDisplayBlock">
+      <div class="container newSectionTitle"><h5>News Section</h5></div>
+    
+    <div class="card newsBlocks" style="width: 18rem" *ngFor="let article of articles">
+        <img class="card-img-top" src={{article.urlToImage}} alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">{{article.title}}</h5>
+          <p class="card-text">
+            {{article.description}}
+          </p>
+          <a class="btn btn-primary"href="{{article.url}}">Read full article</a>
+        </div>
+      </div>
+  </div>
+
+
+

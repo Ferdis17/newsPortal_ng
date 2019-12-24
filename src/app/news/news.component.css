@@ -1,0 +1,22 @@
+.navigationBar{
+    display: block;
+}
+
+.topHeadlineSection{
+    display: block;
+    margin-top: 90px;
+}
+
+.newsDisplayBlock{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newSectionTitle{
+    display: block;
+    margin: 20px;
+}
+
+.newsBlocks{
+    margin: 10px;
+}
